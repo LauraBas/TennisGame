@@ -41,4 +41,10 @@ class GameTest {
         Assertions.assertEquals("forty-advantage", g.describeGame());
     }
 
+    @Test
+    void shouldReturnDeuceIfScoresAreGreaterThan3AndEquals() {
+        Game g = new Game(new Player(3), new Player(3));
+        Assertions.assertEquals("deuce", g.describeGame());
+    }
+
 }

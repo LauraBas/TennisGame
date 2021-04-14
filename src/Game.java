@@ -11,12 +11,15 @@ public class Game {
     }
 
     public String describeGame() {
-        if (player1.getScore() >= 3 && player2.getScore() >=3){
+        if (player1.getScore() >= 3 && player2.getScore() >=3) {
                if (player1.getScore() - player2.getScore() == 1) {
                    return "advantage-" + this.player2.getDescription();
                }
-            if (player2.getScore() - player1.getScore() == 1) {
-                return this.player1.getDescription() + "-advantage";
+               if (player2.getScore() - player1.getScore() == 1) {
+                    return this.player1.getDescription() + "-advantage";
+               }
+            if (player2.getScore() == player1.getScore()) {
+                return "deuce";
             }
         }
        return this.player1.getDescription() + "-" + this.player2.getDescription();
