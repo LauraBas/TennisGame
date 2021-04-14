@@ -16,7 +16,7 @@ public class Game {
                 return "Player 2 wins";
             }
             if (advantageForPlayer1()) {
-                   return "advantage-" + this.player2.getDescription();
+                return "advantage-" + this.player2.getDescription();
             }
             if (advantageForPlayer2()) {
                 return this.player1.getDescription() + "-advantage";
