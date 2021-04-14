@@ -2,7 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-
 class GameTest {
 
     @Test
@@ -45,6 +44,17 @@ class GameTest {
     void shouldReturnDeuceIfScoresAreGreaterThan3AndEquals() {
         Game g = new Game(new Player(3), new Player(3));
         Assertions.assertEquals("deuce", g.describeGame());
+    }
+
+    @Test
+    void shouldReturnPLayer1WinsIfScoreIsGreaterThan4AndDifferences2() {
+        Game g = new Game(new Player(5), new Player(3));
+        Assertions.assertEquals("Player 1 wins", g.describeGame());
+    }
+    @Test
+    void shouldReturnPLayer2WinsIfScoreIsGreaterThan4AndDifferences2() {
+        Game g = new Game(new Player(4), new Player(6));
+        Assertions.assertEquals("Player 2 wins", g.describeGame());
     }
 
 }
