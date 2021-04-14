@@ -29,4 +29,16 @@ class GameTest {
         Assertions.assertEquals("forty-thirty", g.describeGame());
     }
 
+    @Test
+    void shouldReturnAdvantageIfOneMorePointAfter3Points() {
+        Game g = new Game(new Player(4), new Player(3));
+        Assertions.assertEquals("advantage-forty", g.describeGame());
+    }
+
+    @Test
+    void shouldReturnAdvantageIfPlayer2OneMorePointAfter3Points() {
+        Game g = new Game(new Player(3), new Player(4));
+        Assertions.assertEquals("forty-advantage", g.describeGame());
+    }
+
 }
